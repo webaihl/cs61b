@@ -77,6 +77,7 @@ public class IntListExercises {
             lst.first *= lst.first;
         }
 
-        return currElemIsPrime || squarePrimes(lst.rest);
+        // short circuit operation, Two in a row will only count the first one
+        return  squarePrimes(lst.rest) || currElemIsPrime;
     }
 }
